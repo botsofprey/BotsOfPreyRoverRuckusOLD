@@ -8,12 +8,12 @@ import com.qualcomm.robotcore.hardware.HardwareMap;
 
 import java.io.InputStream;
 
-import Autonomous.HeadingVector;
-import Autonomous.Location;
-import MotorControllers.JsonConfigReader;
-import MotorControllers.MotorController;
-import MotorControllers.PIDController;
-import SensorHandlers.ImuHandler;
+import ExampleBaseCode.Autonomous.HeadingVector;
+import ExampleBaseCode.Autonomous.Location;
+import ExampleBaseCode.MotorControllers.JsonConfigReader;
+import ExampleBaseCode.MotorControllers.MotorController;
+import ExampleBaseCode.MotorControllers.PIDController;
+import ExampleBaseCode.SensorHandlers.ImuHandler;
 
 /**
  * Created by robotics on 2/15/18.

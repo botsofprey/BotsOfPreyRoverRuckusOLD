@@ -3,8 +3,8 @@ package ExampleBaseCode.Actions.HardwareWrappers;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
-import Actions.ActionHandler;
-import MotorControllers.MotorController;
+import ExampleBaseCode.Actions.ActionHandler;
+import ExampleBaseCode.MotorControllers.MotorController;
 
 /**
  * Created by robotics on 11/7/17.

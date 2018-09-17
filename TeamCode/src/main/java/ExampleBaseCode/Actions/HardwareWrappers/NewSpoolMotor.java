@@ -6,8 +6,8 @@ import com.qualcomm.robotcore.hardware.TouchSensor;
 
 import java.io.IOException;
 
-import Actions.ActionHandler;
-import MotorControllers.MotorController;
+import ExampleBaseCode.Actions.ActionHandler;
+import ExampleBaseCode.MotorControllers.MotorController;
 
 /**
  * Created by robotics on 1/22/18.

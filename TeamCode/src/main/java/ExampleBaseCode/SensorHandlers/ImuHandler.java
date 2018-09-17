@@ -18,7 +18,7 @@ import org.firstinspires.ftc.robotcore.external.navigation.Velocity;
 import java.io.File;
 import java.io.IOException;
 
-import Autonomous.Location;
+import ExampleBaseCode.Autonomous.Location;
 
 /**
  * Created by root on 8/18/17.

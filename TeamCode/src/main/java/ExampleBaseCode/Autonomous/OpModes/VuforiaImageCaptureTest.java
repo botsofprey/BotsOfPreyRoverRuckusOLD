@@ -8,8 +8,8 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 
 import java.util.ArrayList;
 
-import Autonomous.ImageProcessing.CryptoBoxColumnImageProcessor;
-import Autonomous.VuforiaHelper;
+import ExampleBaseCode.Autonomous.ImageProcessing.CryptoBoxColumnImageProcessor;
+import ExampleBaseCode.Autonomous.VuforiaHelper;
 
 /**
  * Created by root on 11/20/17.

@@ -6,7 +6,7 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 
 import org.firstinspires.ftc.robotcore.external.navigation.RelicRecoveryVuMark;
 
-import Autonomous.VuforiaHelper;
+import ExampleBaseCode.Autonomous.VuforiaHelper;
 
 /**
  * Created by robotics on 1/10/18.

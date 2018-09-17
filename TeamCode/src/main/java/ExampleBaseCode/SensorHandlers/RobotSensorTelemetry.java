@@ -2,7 +2,7 @@ package ExampleBaseCode.SensorHandlers;
 
 import org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit;
 
-import Autonomous.Location;
+import ExampleBaseCode.Autonomous.Location;
 
 /**
  * Created by Jeremy on 8/26/2017.

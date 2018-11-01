@@ -4,6 +4,7 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 import ExampleBaseCode.DriveEngine.HolonomicDriveSystem;
+import ExampleBaseCode.DriveEngine.HolonomicDriveSystemTesting;
 
 /**
  * Created by robotics on 2/16/18.
@@ -16,7 +17,7 @@ public class speedyNewCode extends LinearOpMode {
 
     @Override
     public void runOpMode() throws InterruptedException {
-        HolonomicDriveSystem driveSystem = new HolonomicDriveSystem(hardwareMap,"RobotConfig/JennyV2.json");
+        HolonomicDriveSystemTesting driveSystem = new HolonomicDriveSystemTesting(hardwareMap,"RobotConfig/JennyV2.json");
         JoystickHandler leftStick = new JoystickHandler(gamepad1, JoystickHandler.LEFT_JOYSTICK);
         JoystickHandler rightStick = new JoystickHandler(gamepad1, JoystickHandler.RIGHT_JOYSTICK);
         waitForStart();
@@ -24,9 +25,9 @@ public class speedyNewCode extends LinearOpMode {
         double turningPower = 0;
 
         while(opModeIsActive()){
-             movementPower = movementScale * leftStick.magnitude();
+             movementPower = movementScale * Math.abs(leftStick.magnitude());
              turningPower = turningScale * Math.abs(rightStick.magnitude()) * Math.abs(rightStick.x())/rightStick.x();
-            driveSystem.driveOnHeadingWithTurning(leftStick.angle(), Math.abs(leftStick.magnitude()), turningPower);
+            driveSystem.cartesianDriveOnHeadingWithTurning(leftStick.angle()+45, movementPower, turningPower);
             telemetry.addData("Gamepad1 left Joystick",leftStick.toString());
             telemetry.addData("Gamepad1 right Joystick", rightStick.toString());
             telemetry.update();

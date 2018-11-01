@@ -5,9 +5,9 @@ import com.qualcomm.robotcore.hardware.TouchSensor;
 
 import org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit;
 
-import Autonomous.Location;
-import Autonomous.REVColorDistanceSensorController;
-import MotorControllers.JsonConfigReader;
+import ExampleBaseCode.Autonomous.Location;
+import ExampleBaseCode.Autonomous.REVColorDistanceSensorController;
+import ExampleBaseCode.MotorControllers.JsonConfigReader;
 
 //import static Hardware.JennyWithExtendotronHardware.*;
 

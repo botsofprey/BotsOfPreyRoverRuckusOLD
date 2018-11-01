@@ -24,6 +24,6 @@
   "CAMERA_Ki":"0",
   "CAMERA_Ki_MAX":"0",
   "CAMERA_Kd":"0",
-  "ACCELERATION":"0"
-
+  "ACCELERATION":"0",
+  "IMU_NAME":"imu"
 }

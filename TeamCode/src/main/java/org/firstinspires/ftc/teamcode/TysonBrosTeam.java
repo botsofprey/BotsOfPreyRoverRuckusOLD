@@ -52,6 +52,8 @@ public class TysonBrosTeam extends LinearOpMode {
     DcMotor intakeMotor;
     DcMotor liftMotor;
     ServoHandler depositor;
+    Servo latch;
+    int curDeg = 0;
 
     //DcMotor backMotor;
     //DcMotor liftMotor;
@@ -68,6 +70,7 @@ public class TysonBrosTeam extends LinearOpMode {
         intakeMotor = hardwareMap.dcMotor.get("intakeMotor");
         liftMotor = hardwareMap.dcMotor.get("liftMotor");
         depositor =  new ServoHandler("depositor", hardwareMap);
+        latch = hardwareMap.servo.get("latch");
 
 
         leftMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.FLOAT);
@@ -77,6 +80,7 @@ public class TysonBrosTeam extends LinearOpMode {
         rightMotor.setDirection(DcMotorSimple.Direction.REVERSE);
         intakeMotor.setDirection(DcMotorSimple.Direction.FORWARD);
         depositor.setDirection(Servo.Direction.FORWARD);
+        latch.setDirection(Servo.Direction.FORWARD);
         leftMotor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         rightMotor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         intakeMotor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
@@ -94,6 +98,15 @@ public class TysonBrosTeam extends LinearOpMode {
 
         // run until the end of the match (driver presses STOP)
         while (opModeIsActive()) {
+            if(gamepad1.x){
+                curDeg++;
+                while(gamepad1.x);
+                latch.setPosition(63.0/180.0);
+            }
+            else if(gamepad1.y){
+
+                latch.setPosition(42.0/180.0);
+            }
             if(gamepad1.dpad_up){
                 depositor.setDegree(HOLD_DEGREE);
             }
@@ -122,6 +135,7 @@ public class TysonBrosTeam extends LinearOpMode {
             if (gamepad1.a) intakeMotor.setPower(.75);
             else if (gamepad1.b) intakeMotor.setPower(-.75);
             else intakeMotor.setPower(0);
+
 
             telemetry.addData("Status", "Run Time: " + runtime.toString());
             telemetry.update();
